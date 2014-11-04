@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JZRippleButton.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    JZRippleButton *button = [[JZRippleButton alloc] init];
+    button.center = self.view.center;
+    button.bounds = CGRectMake(0, 0, 90, 90);
+    
 }
 
 @end

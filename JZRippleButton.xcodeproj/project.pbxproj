@@ -14,6 +14,7 @@
 		4253849E1A086511003C1598 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4253849D1A086511003C1598 /* Images.xcassets */; };
 		425384A11A086511003C1598 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4253849F1A086511003C1598 /* LaunchScreen.xib */; };
 		425384AD1A086511003C1598 /* JZRippleButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 425384AC1A086511003C1598 /* JZRippleButtonTests.m */; };
+		425384B81A086539003C1598 /* JZRippleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 425384B71A086539003C1598 /* JZRippleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		425384A61A086511003C1598 /* JZRippleButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JZRippleButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		425384AB1A086511003C1598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425384AC1A086511003C1598 /* JZRippleButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZRippleButtonTests.m; sourceTree = "<group>"; };
+		425384B61A086539003C1598 /* JZRippleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZRippleButton.h; sourceTree = "<group>"; };
+		425384B71A086539003C1598 /* JZRippleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZRippleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +84,10 @@
 		4253848F1A086511003C1598 /* JZRippleButton */ = {
 			isa = PBXGroup;
 			children = (
-				425384941A086511003C1598 /* AppDelegate.h */,
-				425384951A086511003C1598 /* AppDelegate.m */,
+				425384B61A086539003C1598 /* JZRippleButton.h */,
+				425384B71A086539003C1598 /* JZRippleButton.m */,
 				425384971A086511003C1598 /* ViewController.h */,
 				425384981A086511003C1598 /* ViewController.m */,
-				4253849A1A086511003C1598 /* Main.storyboard */,
-				4253849D1A086511003C1598 /* Images.xcassets */,
-				4253849F1A086511003C1598 /* LaunchScreen.xib */,
 				425384901A086511003C1598 /* Supporting Files */,
 			);
 			path = JZRippleButton;
@@ -96,6 +96,11 @@
 		425384901A086511003C1598 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4253849A1A086511003C1598 /* Main.storyboard */,
+				425384941A086511003C1598 /* AppDelegate.h */,
+				425384951A086511003C1598 /* AppDelegate.m */,
+				4253849D1A086511003C1598 /* Images.xcassets */,
+				4253849F1A086511003C1598 /* LaunchScreen.xib */,
 				425384911A086511003C1598 /* Info.plist */,
 				425384921A086511003C1598 /* main.m */,
 			);
@@ -222,6 +227,7 @@
 				425384991A086511003C1598 /* ViewController.m in Sources */,
 				425384961A086511003C1598 /* AppDelegate.m in Sources */,
 				425384931A086511003C1598 /* main.m in Sources */,
+				425384B81A086539003C1598 /* JZRippleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
