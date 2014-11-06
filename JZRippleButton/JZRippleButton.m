@@ -40,6 +40,8 @@
 {
     self.borderColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.7];
     self.borderWidth = 5.0;
+    
+    self.rippleRadius = 2.5;
     [self updateUI];
 }
 
@@ -105,7 +107,7 @@
     
     CABasicAnimation *scaleAnimation = [[CABasicAnimation alloc] init];
     scaleAnimation.keyPath = @"transform.scale";
-    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.5, 1.5, 1.0)];
+    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(self.rippleRadius, self.rippleRadius, 1.0)];
     
     CABasicAnimation *alphaAnimation = [[CABasicAnimation alloc] init];
     alphaAnimation.keyPath = @"opacity";
@@ -118,11 +120,6 @@
     animationGroup.animations = @[scaleAnimation, alphaAnimation];
     [circleShape addAnimation:animationGroup forKey:nil];
 }
-
-//- (CGRect)titleRectForContentRect:(CGRect)contentRect
-//{
-//    return CGRectMake(contentRect.size, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
-//}
 
 - (void)setBorderColor:(UIColor *)borderColor
 {

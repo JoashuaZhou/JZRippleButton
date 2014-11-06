@@ -29,8 +29,8 @@
     
     [button setTitle:@"JZRippleButton" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont boldSystemFontOfSize:14];;
-    button.backgroundColor = [UIColor colorWithRed:0/255.0 green:128/255.0 blue:255/255.0 alpha:1.0];
-    button.borderWidth = 3.0;
+    button.backgroundColor = [UIColor colorWithRed:255/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
+    button.borderWidth = 5.0;
     button.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     [self.view addSubview:button];
 }

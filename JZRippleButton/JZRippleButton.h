@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) UIColor *borderColor;
 @property (nonatomic, assign) CGFloat borderWidth;
+@property (nonatomic, assign) CGFloat rippleRadius;
 
 @end
