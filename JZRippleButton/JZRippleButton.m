@@ -119,6 +119,11 @@
     [circleShape addAnimation:animationGroup forKey:nil];
 }
 
+//- (CGRect)titleRectForContentRect:(CGRect)contentRect
+//{
+//    return CGRectMake(contentRect.size, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+//}
+
 - (void)setBorderColor:(UIColor *)borderColor
 {
     _borderColor = borderColor;
