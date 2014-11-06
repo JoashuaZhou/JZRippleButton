@@ -22,6 +22,9 @@
     button.center = self.view.center;
     button.bounds = CGRectMake(0, 0, 90, 90);
     
+    button.borderWidth = 3.0;
+    button.borderColor = [UIColor redColor];
+    [self.view addSubview:button];
 }
 
 @end

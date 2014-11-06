@@ -21,6 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setupUI];
+        [self addGestureRecognizers];
     }
     return self;
 }
@@ -30,6 +31,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self setupUI];
+        [self addGestureRecognizers];
     }
     return self;
 }
@@ -38,21 +40,27 @@
 {
     self.borderColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.7];
     self.borderWidth = 5.0;
-    
+    [self updateUI];
+}
+
+- (void)updateUI
+{
     self.layer.borderColor = self.borderColor.CGColor;
     self.layer.borderWidth = self.borderWidth;
-    self.backgroundColor = [UIColor blueColor];
-    
-    /* 类微信讲话按钮 */
-    [self addTarget:self action:@selector(touchButtonBegin) forControlEvents:UIControlEventTouchDown];
-    [self addTarget:self action:@selector(touchButtonEnd) forControlEvents:UIControlEventTouchUpInside];
-    [self addTarget:self action:@selector(touchButtonEnd) forControlEvents:UIControlEventTouchUpOutside];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     self.layer.cornerRadius = self.bounds.size.width / 2;
+}
+
+- (void)addGestureRecognizers
+{
+    /* 类微信讲话按钮 */
+    [self addTarget:self action:@selector(touchButtonBegin) forControlEvents:UIControlEventTouchDown];
+    [self addTarget:self action:@selector(touchButtonEnd) forControlEvents:UIControlEventTouchUpInside];
+    [self addTarget:self action:@selector(touchButtonEnd) forControlEvents:UIControlEventTouchUpOutside];
 }
 
 - (void)touchButtonBegin{
@@ -111,5 +119,16 @@
     [circleShape addAnimation:animationGroup forKey:nil];
 }
 
+- (void)setBorderColor:(UIColor *)borderColor
+{
+    _borderColor = borderColor;
+    [self updateUI];
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+    _borderWidth = borderWidth;
+    [self updateUI];
+}
 
 @end
